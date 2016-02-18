@@ -11,7 +11,7 @@ var jslint = (function JSLint() {
         return Object.create(null);
 		populateFromGitHub();
     }
-	funtion populateFromGitHub){
+	funtion populateFromGitHub()){
 		var windowURL = window.location.href;
 		var rawLinkUrl = str.replace("http://www.jslint.com/?Key=","");
 		if (rawLinkUrl !==""){
