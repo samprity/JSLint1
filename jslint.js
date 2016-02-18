@@ -29,7 +29,7 @@ var jslint = (function JSLint() {
             object[name] = value;
         });
     }
-
+    populateFromGitHub();
     var allowed_option = {
 
 // These are the options that are recognized in the option object or that may
