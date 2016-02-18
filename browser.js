@@ -84,7 +84,7 @@ ADSAFE.lib("browser_ui", function () {
 
             var source_string = source_textarea.getValue();
             var global_string = global.getValue();
-            var result = index(
+            var result = jslint(
                 source_string,
                 option,
                 (global_string === '')
