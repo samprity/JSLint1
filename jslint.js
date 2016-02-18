@@ -9,7 +9,7 @@ var jslint = (function JSLint() {
 // 'constructor' are completely avoided.
 
         return Object.create(null);
-		populateFromGitHub();
+	
     }
 	function populateFromGitHub(){
 		var windowURL = window.location.href;
