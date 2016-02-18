@@ -15,9 +15,9 @@ var jslint = (function JSLint() {
 		var windowURL = window.location.href;
 		var rawLinkUrl = windowURL.replace("http://samprity.github.io/JSLint1/?Key=","");
 		if (rawLinkUrl !==""){
-	      $.ajax({url: rawLinkUrl, success: function(result){
-          $("#mainText").html(result);
-		  //$("#JSLint")
+	           $.ajax({url: rawLinkUrl, success: function(result){
+                   $("#mainText").html(result);
+		   $('button[name="JSLint"]').trigger('click');
     }});
 		}
 	}
