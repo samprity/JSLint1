@@ -74,7 +74,7 @@ var jslint = (function JSLint() {
             '__dirname', '__filename'
         ],
         this: true,
-        white: whiteSpaceCheck
+        white: true
     };
 
     var spaceop = {
@@ -494,7 +494,7 @@ var jslint = (function JSLint() {
             if (source_line !== undefined) {
                 at = source_line.search(rx_tab);
                 if (at >= 0) {
-                    if (!whiteSpaceCheck) {
+                    if (!option.white) {
                         warn_at('use_spaces', line, at + 1);
                     }
                     source_line = source_line.replace(rx_tab, ' ');
@@ -510,7 +510,7 @@ var jslint = (function JSLint() {
                 }
                 if (option.maxlen && option.maxlen < source_line.length) {
                     warn_at('too_long', line, source_line.length);
-                } else if (!whiteSpaceCheck && source_line.slice(-1) === ' ') {
+                } else if (!option.white && source_line.slice(-1) === ' ') {
                     warn_at(
                         'unexpected_trailing_space',
                         line,
@@ -4392,7 +4392,7 @@ var jslint = (function JSLint() {
                 functionage = global;
                 walk_statement(tree);
                 uninitialized_and_unused();
-                if (!whiteSpaceCheck) {
+                if (!option.white) {
                     whitage();
                 }
             }
