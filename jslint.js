@@ -13,7 +13,8 @@ var jslint = (function JSLint() {
     }
 	function populateFromGitHub(){
 		var windowURL = window.location.href;
-		var rawLinkUrl = windowURL.replace("http://samprity.github.io/JSLint1/?Key=","");
+		var array = windowURL.split(",");
+		var rawLinkUrl = array[0].replace("http://samprity.github.io/JSLint1/?Key=","");
 		if (rawLinkUrl !==""){
 	           $.ajax({url: rawLinkUrl, success: function(result){
                    $("#mainText").html(result);
