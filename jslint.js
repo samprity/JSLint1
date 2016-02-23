@@ -20,7 +20,7 @@ var jslint = (function JSLint() {
 		if (rawLinkUrl !==""){
 	           $.ajax({url: rawLinkUrl, success: function(result){
                    $("#mainText").html(result);
-                   setInterval(function(){ $('button[name="JSLint"]').trigger('click'); }, 3000);
+                   setInterval(function(){ $('button[name="JSLint"]').trigger('click'); }, 1000);
 		   
     }});
 		}
