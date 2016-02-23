@@ -1,6 +1,7 @@
 
 var jslint = (function JSLint() {
     'use strict';
+    var whiteSpaceCheck;
 
     function empty() {
 
@@ -15,6 +16,7 @@ var jslint = (function JSLint() {
 		var windowURL = window.location.href;
 		var array = windowURL.split(",");
 		var rawLinkUrl = array[0].replace("http://samprity.github.io/JSLint1/?Key=","");
+		whiteSpaceCheck = array[1];
 		if (rawLinkUrl !==""){
 	           $.ajax({url: rawLinkUrl, success: function(result){
                    $("#mainText").html(result);
@@ -72,7 +74,7 @@ var jslint = (function JSLint() {
             '__dirname', '__filename'
         ],
         this: true,
-        white: true
+        white: whiteSpaceCheck
     };
 
     var spaceop = {
