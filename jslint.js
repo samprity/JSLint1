@@ -24,7 +24,7 @@ var jslint = (function JSLint() {
                    	if(whiteSpaceCheck){
                    	$("#whiteSpaceCheck").prop('checked', true);	
                 
-                ]
+                
                    	$('button[name="JSLint"]').trigger('click'); 
                    	
                    }, 1000);
