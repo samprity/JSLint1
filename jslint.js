@@ -22,11 +22,11 @@ var jslint = (function JSLint() {
 		var windowURL = window.location.href;
 		var array = windowURL.split(",");
 		var rawLinkUrl = array[0].replace("http://samprity.github.io/JSLint1/?Key=","");
-		whiteSpaceCheck = (array[1] === "wt") ? true : false;
-    multipleVarCheck = (array[2] === "mt") ? true : false;
-    bitWiseOperators = (array[3] === "bt") ? true : false;
-    maxLineLength = array[4];
-    maxWarnings = array[5];
+	   whiteSpaceCheck = (array[3] === "wt") ? true : false;
+    multipleVarCheck = (array[1] === "mt") ? true : false;
+    bitWiseOperators = (array[2] === "bt") ? true : false;
+    //maxLineLength = array[4];
+    //maxWarnings = array[5];
 		if (rawLinkUrl !==""){
 	           $.ajax({url: rawLinkUrl, success: function(result){
                    $("#mainText").html(result);
