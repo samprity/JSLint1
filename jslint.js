@@ -48,7 +48,7 @@ var jslint = (function JSLint() {
 
                    	$('button[name="JSLint"]').trigger('click');
 
-                   }, 1000);
+                  }, 3000);
 
     }});
 		}
