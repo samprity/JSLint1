@@ -44,12 +44,11 @@ var jslint = (function JSLint() {
                    	}
                     $("#maxLen").val(maxLineLength);
                     $("#maxWarn").val(maxWarnings);
-                    //option.maxerr=maxWarnings;
 
 
                    	$('button[name="JSLint"]').trigger('click');
 
-                  }, 1000);
+                  }, 3000);
 
 
     }});
