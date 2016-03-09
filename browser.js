@@ -122,8 +122,6 @@ ADSAFE.lib("browser_ui", function () {
             property_textarea.select();
         }
 
-
-
 // Lay in the click handlers.
 
         dom.q('button').each(function (button) {
@@ -145,3 +143,4 @@ ADSAFE.lib("browser_ui", function () {
         source_textarea.select();
     };
 });
+

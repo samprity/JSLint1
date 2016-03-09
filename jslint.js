@@ -44,18 +44,16 @@ var jslint = (function JSLint() {
                    	}
                     $("#maxLen").val(maxLineLength);
                     $("#maxWarn").val(maxWarnings);
+                    //option.maxerr=maxWarnings;
 
 
                    	$('button[name="JSLint"]').trigger('click');
 
                   }, 3000);
 
-
     }});
 		}
-
 	}
-
     function populate(object, array, value) {
 
 // Augment an object by taking property names from an array of strings.
