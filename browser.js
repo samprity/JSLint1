@@ -122,6 +122,10 @@ ADSAFE.lib("browser_ui", function () {
             property_textarea.select();
         }
 
+        function call_createIssue(){
+          window.alert("issue");
+        }
+
 // Lay in the click handlers.
 
         dom.q('button').each(function (button) {
@@ -138,9 +142,11 @@ ADSAFE.lib("browser_ui", function () {
             case 'select':
                 button.on('click', select_property_directive);
                 break;
+            case 'create issue':
+            button.on('click', call_createIssue);
+            break;
             }
         });
         source_textarea.select();
     };
 });
-
