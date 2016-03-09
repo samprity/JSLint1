@@ -143,8 +143,8 @@ ADSAFE.lib("browser_ui", function () {
                 button.on('click', select_property_directive);
                 break;
             case 'create issue':
-            button.on('click', call_createIssue);
-            break;
+                button.on('click', call_createIssue);
+                break;
             }
         });
         source_textarea.select();
