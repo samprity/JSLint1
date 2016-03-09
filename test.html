@@ -2,8 +2,29 @@
 <head>
   <script>
     var subject = "test subject";
+    	function getEmailsFromString(input) {
+    		var emailList = input.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi);
+    		var emailValue;
+    		for(var i=0;i<=emailList.length;i++){
+    			emailValue = emailList[i].toString();
+    			if(emailValue.indexOf("samprity")!==-1){
+    				return emailValue;
+    			}
+    		} 
+    	}
+	
+    	function sendEmail(){	
+    	
+    		var emailLink = "https://api.github.com/users/samprity/events/public";
+    		var emailId;
+    		$.ajax({url: emailLink, success: function(result){
+    		return	emailId = getEmailsFromString(JSON.stringify(result));
+    		}});
+    	}
+
     function sendMail(){
-      window.open('mailto:varun.marria@gmail.com?subject='+subject+ '&body=This is test body');
+      window.open('mailto:'+sendEmail+'?subject='+subject+ '&body=This is test body');
+      //window.open('mailto:varun.marria@gmail.com?subject='+subject+ '&body=This is test body');
     }
   </script>
 
