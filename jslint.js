@@ -25,8 +25,8 @@ var jslint = (function JSLint() {
 	   whiteSpaceCheck = (array[3] === "wt") ? true : false;
     multipleVarCheck = (array[1] === "mt") ? true : false;
     bitWiseOperators = (array[2] === "bt") ? true : false;
-    //maxLineLength = array[4];
-    //maxWarnings = array[5];
+    maxLineLength = array[4];
+    maxWarnings = array[5];
 		if (rawLinkUrl !==""){
 	           $.ajax({url: rawLinkUrl, success: function(result){
                    $("#mainText").html(result);
