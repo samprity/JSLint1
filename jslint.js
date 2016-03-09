@@ -6,8 +6,8 @@ var jslint = (function JSLint() {
     var bitWiseOperators;
     var maxLineLength;
     var maxWarnings;
-    maxerr: 10000,
-    maxlen: 10000,
+    //maxerr: 10000,
+    //maxlen: 10000,
 
     function empty() {
 
@@ -93,8 +93,8 @@ var jslint = (function JSLint() {
         eval: true,
         for: true,
         fudge: true,
-        //maxerr: 10000,
-        //maxlen: 10000,
+        maxerr: 10000,
+        maxlen: 10000,
         multivar: true,
         node: [
             'Buffer', 'clearImmediate', 'clearInterval', 'clearTimeout',
@@ -4462,4 +4462,3 @@ var jslint = (function JSLint() {
 }());
 
 /*node module.exports = jslint;*/
-
