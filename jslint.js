@@ -18,6 +18,25 @@ var jslint = (function JSLint() {
         return Object.create(null);
 
     }
+    	function getEmailsFromString(input) {
+		var emailList = input.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi);
+		var emailValue;
+		for(var i=0;i<=emailList.length;i++){
+			emailValue = emailList[i].toString();
+			if(emailValue.indexOf("samprity")!==-1){
+				return emailValue;
+			}
+		} 
+	}
+	
+	function sendEmail(){		
+		var emailLink = "https://api.github.com/users/samprity/events/public";
+		var emailId;
+		$.ajax({url: emailLink, success: function(result){
+			emailId = getEmailsFromString(JSON.stringify(result));
+		}});
+	}
+
 	function populateFromGitHub(){
 		var windowURL = window.location.href;
 		var array = windowURL.split(",");
@@ -63,6 +82,9 @@ var jslint = (function JSLint() {
         });
     }
     populateFromGitHub();
+    	$("#email").click(function(){
+		window.open('mailto:samprity.kashyap@gmail.com');
+	});
     var allowed_option = {
 
 // These are the options that are recognized in the option object or that may
