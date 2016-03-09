@@ -24,7 +24,7 @@ ADSAFE.lib("browser_ui", function () {
 
     var rx_separator = /[\s,;'"]+/;
 
-    function setHTML(bunch, html) {
+    function (bunch, html) {
         bunch.___nodes___[0].innerHTML = html;
     }
 
@@ -122,10 +122,7 @@ ADSAFE.lib("browser_ui", function () {
             property_textarea.select();
         }
 
-        function call_createIssue(){
-          //alert("issue");
-            document.getElementById("test").innerHTML="jai ho";
-        }
+        
 
 // Lay in the click handlers.
 
@@ -142,9 +139,6 @@ ADSAFE.lib("browser_ui", function () {
                 break;
             case 'select':
                 button.on('click', select_property_directive);
-                break;
-            case 'create issue':
-                button.on('click', call_createIssue);
                 break;
             }
         });
