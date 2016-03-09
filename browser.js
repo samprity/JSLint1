@@ -123,7 +123,7 @@ ADSAFE.lib("browser_ui", function () {
         }
 
         function call_createIssue(){
-          window.alert("issue");
+          alert("issue");
         }
 
 // Lay in the click handlers.
