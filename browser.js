@@ -124,7 +124,8 @@ ADSAFE.lib("browser_ui", function () {
 
         function call_createIssue(){
             event.preventDefault();
-            window.alert("waheguru");
+            document.getElementById("test").innerHTML ="cdcf";
+            //window.alert("waheguru");
         }
 
 // Lay in the click handlers.
