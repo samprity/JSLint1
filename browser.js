@@ -122,11 +122,7 @@ ADSAFE.lib("browser_ui", function () {
             property_textarea.select();
         }
 
-        function call_createIssue(){
-            event.preventDefault();
-            document.getElementById("test").innerHTML ="cdcf";
-            //window.alert("waheguru");
-        }
+        
 
 // Lay in the click handlers.
 
@@ -144,9 +140,7 @@ ADSAFE.lib("browser_ui", function () {
             case 'select':
                 button.on('click', select_property_directive);
                 break;
-            case 'issue':
-                button.on('click', call_createIssue);
-                break;
+
             }
         });
         source_textarea.select();
