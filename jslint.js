@@ -54,19 +54,9 @@ var jslint = (function JSLint() {
 
     }});
 		}
-    dom.q('button').each(function (button) {
-        switch (button.getName()) {
 
-        case 'create issue':
-            button.on('click', call_createIssue);
-            break;
-        }
-    });
 	}
-  function call_createIssue(){
-    window.alert("issue");
 
-  }
     function populate(object, array, value) {
 
 // Augment an object by taking property names from an array of strings.
