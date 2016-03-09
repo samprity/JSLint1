@@ -42,8 +42,8 @@ var jslint = (function JSLint() {
                     if(bitWiseOperators){
                    	$("#bitWiseOperators").prop('checked', true);
                    	}
-                    //option.maxlen=maxLineLength;
-                    //option.maxerr=maxWarnings;
+                    option.maxlen=maxLineLength;
+                    option.maxerr=maxWarnings;
 
 
                    	$('button[name="JSLint"]').trigger('click');
