@@ -123,7 +123,8 @@ ADSAFE.lib("browser_ui", function () {
         }
 
         function call_createIssue(){
-          alert("issue");
+          //alert("issue");
+            document.getElementById("test").innerHTML="jai ho";
         }
 
 // Lay in the click handlers.
