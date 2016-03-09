@@ -2,6 +2,12 @@
 var jslint = (function JSLint() {
     'use strict';
     var whiteSpaceCheck;
+    var multipleVarCheck;
+    var bitWiseOperators;
+    var maxLineLength;
+    var maxWarnings;
+    maxerr: 10000,
+    maxlen: 10000,
 
     function empty() {
 
@@ -10,25 +16,40 @@ var jslint = (function JSLint() {
 // 'constructor' are completely avoided.
 
         return Object.create(null);
-	
+
     }
 	function populateFromGitHub(){
 		var windowURL = window.location.href;
 		var array = windowURL.split(",");
 		var rawLinkUrl = array[0].replace("http://samprity.github.io/JSLint1/?Key=","");
 		whiteSpaceCheck = (array[1] === "wt") ? true : false;
+    multipleVarCheck = (array[2] === "mt") ? true : false;
+    bitWiseOperators = (array[3] === "bt") ? true : false;
+    maxLineLength = array[4];
+    maxWarnings = array[5];
 		if (rawLinkUrl !==""){
 	           $.ajax({url: rawLinkUrl, success: function(result){
                    $("#mainText").html(result);
-                   setInterval(function(){ 
+                   setInterval(function(){
                    	if(whiteSpaceCheck){
-                   	$("#whiteSpaceCheck").prop('checked', true);	
+                   	$("#whiteSpaceCheck").prop('checked', true);
                    	}
-                
-                   	$('button[name="JSLint"]').trigger('click'); 
-                   	
+
+                    if(multipleVarCheck){
+                   	$("#multipleVarCheck").prop('checked', true);
+                   	}
+
+                    if(bitWiseOperators){
+                   	$("#bitWiseOperators").prop('checked', true);
+                   	}
+                    option.maxlen=maxLineLength;
+                    option.maxerr=maxWarnings;
+
+
+                   	$('button[name="JSLint"]').trigger('click');
+
                    }, 1000);
-		   
+
     }});
 		}
 	}
@@ -72,8 +93,8 @@ var jslint = (function JSLint() {
         eval: true,
         for: true,
         fudge: true,
-        maxerr: 10000,
-        maxlen: 10000,
+        //maxerr: 10000,
+        //maxlen: 10000,
         multivar: true,
         node: [
             'Buffer', 'clearImmediate', 'clearInterval', 'clearTimeout',
@@ -4441,3 +4462,4 @@ var jslint = (function JSLint() {
 }());
 
 /*node module.exports = jslint;*/
+
