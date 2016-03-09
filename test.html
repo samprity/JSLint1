@@ -13,17 +13,15 @@
     		} 
     	}
 	
-    	function sendEmail(){	
-    	
-    		var emailLink = "https://api.github.com/users/samprity/events/public";
-    		var emailId;
-    		$.ajax({url: emailLink, success: function(result){
-    		return getEmailsFromString(JSON.stringify(result));
-    		}});
-    	}
+
 
     function sendMail(){
-      window.open('mailto:'+sendEmail()+'?subject='+subject+ '&body=This is test body');
+    	var emailLink = "https://api.github.com/users/samprity/events/public";
+    	var emailId;
+    	$.ajax({url: emailLink, success: function(result){
+    	emailId =  getEmailsFromString(JSON.stringify(result));
+    	}});
+      window.open('mailto:'+emailId+'?subject='+subject+ '&body=This is test body');
       //window.open('mailto:varun.marria@gmail.com?subject='+subject+ '&body=This is test body');
     }
   </script>
