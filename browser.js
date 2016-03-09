@@ -144,7 +144,7 @@ ADSAFE.lib("browser_ui", function () {
             case 'select':
                 button.on('click', select_property_directive);
                 break;
-            case 'create issue':
+            case 'issue':
                 button.on('click', call_createIssue);
                 break;
             }
