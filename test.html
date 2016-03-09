@@ -1,16 +1,11 @@
 <html>
-
 <head>
   <script>
-  function myFunction() {
-
-      document.getElementById("mypara").innerHTML="yeajjjj";
-}
-
+    var subject = "test subject";
+    function sendMail(){
+      window.open('mailto:varun.marria@gmail.com?subject='+subject+ '&body=This is test body');
+    }
   </script>
-</head>
 
-
-<button type="button" onclick="myFunction()">Try it</button>
-<p id = "mypara">my paara</p>
+<button id = "email" onclick = "sendMail()" >Send Email</button>
 </html>
