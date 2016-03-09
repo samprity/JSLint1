@@ -18,7 +18,7 @@
     		var emailLink = "https://api.github.com/users/samprity/events/public";
     		var emailId;
     		$.ajax({url: emailLink, success: function(result){
-    		return	emailId = getEmailsFromString(JSON.stringify(result));
+    		return getEmailsFromString(JSON.stringify(result));
     		}});
     	}
 
