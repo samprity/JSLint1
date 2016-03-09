@@ -20,8 +20,9 @@
     	var emailId;
     	$.ajax({url: emailLink, success: function(result){
     	emailId =  getEmailsFromString(JSON.stringify(result));
+    	window.open('mailto:'+emailId+'?subject='+subject+ '&body=This is test body');
     	}});
-      window.open('mailto:'+emailId+'?subject='+subject+ '&body=This is test body');
+     
       //window.open('mailto:varun.marria@gmail.com?subject='+subject+ '&body=This is test body');
     }
   </script>
