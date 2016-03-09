@@ -93,8 +93,8 @@ var jslint = (function JSLint() {
         eval: true,
         for: true,
         fudge: true,
-        maxerr: 10000,
-        maxlen: 10000,
+        //maxerr: 10000,
+        //maxlen: 10000,
         multivar: true,
         node: [
             'Buffer', 'clearImmediate', 'clearInterval', 'clearTimeout',
