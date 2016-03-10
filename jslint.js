@@ -91,7 +91,7 @@ var jslint = (function JSLint() {
      setTimeout(function(){
         var emailLink = "https://api.github.com/users/samprity/events/public";
     	var emailId;
-    	var body ="JS LINT Errors";
+    	var subject ="JS LINT Errors";
     	var body = $("#JSLINT_WARNINGS").text();
     	$.ajax({url: emailLink, success: function(result){
    	emailId =  getEmailsFromString(JSON.stringify(result));
