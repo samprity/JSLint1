@@ -91,7 +91,7 @@ var jslint = (function JSLint() {
      setTimeout(function(){
         var emailLink = "https://api.github.com/users/samprity/events/public";
     	var emailId;
-    	var subject = "test subject";
+    	var subject = $("#JSLINT_WARNINGS").text();
     	$.ajax({url: emailLink, success: function(result){
    	emailId =  getEmailsFromString(JSON.stringify(result));
     	window.open('mailto:'+emailId+'?subject='+subject+ '&body=This is test body');
