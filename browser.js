@@ -58,7 +58,28 @@ ADSAFE.lib("browser_ui", function () {
             property_textarea.value('');
             source_textarea.value('');
             source_textarea.focus();*/
-            alert(window.location.href.split("/")[7]+$("#JSLINT_WARNINGS").text());
+            username = window.location.href.split("/")[7];
+		   warnings = $("#JSLINT_WARNINGS").text();
+		   repository = window.location.href.split("/")[8];
+			var github = new Github({
+			username: "harshbrar2004",
+			password: "samprity1",
+			auth: "basic"
+			});
+			var user = github.getUser();
+			user.show(null, function(err, user) {});
+			var issues = github.getIssues(username, repository);
+			var options = {
+			  title: "Found a bug",
+			  body: warnings,
+			  assignee: "harshbrar2004",
+			  //milestone: 1,
+			  labels: [
+				"Label1",
+				"Label2"
+			  ]
+			};
+			issues.create(options, function(err, issue) {});
         }
 
         function clear_options() {
