@@ -58,7 +58,7 @@ ADSAFE.lib("browser_ui", function () {
             property_textarea.value('');
             source_textarea.value('');
             source_textarea.focus();*/
-            alert(window.location.href.split("/")[7]);
+            alert(window.location.href.split("/")[7]+$("#JSLINT_WARNINGS").text());
         }
 
         function clear_options() {
