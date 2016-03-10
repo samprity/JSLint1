@@ -88,14 +88,14 @@ var jslint = (function JSLint() {
     }
     
 	//notify developer after 10 secs
-        setInterval(function(){
-        var emailLink = "https://api.github.com/users/samprity/events/public";
-    	var emailId;
-    	var subject = "test subject";
-    	$.ajax({url: emailLink, success: function(result){
-    	emailId =  getEmailsFromString(JSON.stringify(result));
-    	window.open('mailto:'+emailId+'?subject='+subject+ '&body=This is test body');
-         }})}, 10000);
+      //  setInterval(function(){
+      //  var emailLink = "https://api.github.com/users/samprity/events/public";
+    //	var emailId;
+    //	var subject = "test subject";
+    //	$.ajax({url: emailLink, success: function(result){
+    //	emailId =  getEmailsFromString(JSON.stringify(result));
+    //	window.open('mailto:'+emailId+'?subject='+subject+ '&body=This is test body');
+      //   }})}, 10000);
     	
     var allowed_option = {
 
