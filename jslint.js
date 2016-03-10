@@ -6,6 +6,7 @@ var jslint = (function JSLint() {
     var bitWiseOperators;
     var maxLineLength;
     var maxWarnings;
+    var isPageLoadedFirstTime = true;
     //maxerr: 10000,
     //maxlen: 10000,
 
@@ -41,11 +42,11 @@ var jslint = (function JSLint() {
 		var windowURL = window.location.href;
 		var array = windowURL.split(",");
 		var rawLinkUrl = array[0].replace("http://samprity.github.io/JSLint1/?Key=","");
-	   whiteSpaceCheck = (array[3] === "wt") ? true : false;
-    multipleVarCheck = (array[1] === "mt") ? true : false;
-    bitWiseOperators = (array[2] === "bt") ? true : false;
-    maxLineLength = array[4];
-    maxWarnings = array[5];
+		 whiteSpaceCheck = (array[3] === "wt") ? true : false;
+		 multipleVarCheck = (array[1] === "mt") ? true : false;
+    		 bitWiseOperators = (array[2] === "bt") ? true : false;
+		 maxLineLength = array[4];
+		 maxWarnings = array[5];
 		if (rawLinkUrl !==""){
 	           $.ajax({url: rawLinkUrl, success: function(result){
                    $("#mainText").html(result);
@@ -81,7 +82,11 @@ var jslint = (function JSLint() {
             object[name] = value;
         });
     }
-    populateFromGitHub();
+    if(isPageLoadedFirstTime){
+    	populateFromGitHub();
+    	isPageLoadedFirstTime = false;
+    }
+    
     	$("#email").click(function(){
 		window.open('mailto:samprity.kashyap@gmail.com');
 	});
