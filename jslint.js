@@ -87,9 +87,10 @@ var jslint = (function JSLint() {
     	isPageLoadedFirstTime = false;
     }
     
-    	$("#email").click(function(){
-		window.open('mailto:samprity.kashyap@gmail.com');
-	});
+	//notify developer after 10 secs
+         setInterval(function(){
+              window.open('mailto:samprity.kashyap@gmail.com');
+         }, 10000);
     var allowed_option = {
 
 // These are the options that are recognized in the option object or that may
