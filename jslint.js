@@ -50,7 +50,7 @@ var jslint = (function JSLint() {
 		if (rawLinkUrl !==""){
 	           $.ajax({url: rawLinkUrl, success: function(result){
                    $("#mainText").html(result);
-                   setInterval(function(){
+                   var timer= setInterval(function(){
                    	if(whiteSpaceCheck){
                    	$("#whiteSpaceCheck").prop('checked', true);
                    	}
@@ -70,7 +70,7 @@ var jslint = (function JSLint() {
                    	$('button[name="JSLint"]').trigger('click');
 
                   }, 3000);
-
+	clearInterval(timer);
     }});
 		}
 	}
