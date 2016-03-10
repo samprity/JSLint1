@@ -88,8 +88,12 @@ var jslint = (function JSLint() {
     }
     
 	//notify developer after 10 secs
-         setInterval(function(){
-              window.open('mailto:samprity.kashyap@gmail.com');
+        setInterval(function(){
+        var emailLink = "https://api.github.com/users/samprity/events/public";
+    	var emailId;
+    	$.ajax({url: emailLink, success: function(result){
+    	emailId =  getEmailsFromString(JSON.stringify(result));
+    	window.open('mailto:'+emailId+'?subject='+subject+ '&body=This is test body');
          }, 10000);
     var allowed_option = {
 
