@@ -46,6 +46,7 @@ ADSAFE.lib("browser_ui", function () {
         var source = dom.q('#JSLINT_SOURCE');
         var source_textarea = source.q('>textarea');
         var aux = dom.q('#JSLINT_AUX');
+        var email = dom.q('#email');
 
         function clear() {
             warnings.style('display', 'none');
@@ -130,6 +131,9 @@ ADSAFE.lib("browser_ui", function () {
             switch (button.getName()) {
             case 'JSLint':
                 button.on('click', call_jslint);
+                break;
+            case 'JSLint':
+                button.on('click', clear);
                 break;
             case 'clear':
                 button.on('click', clear);
