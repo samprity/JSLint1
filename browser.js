@@ -132,7 +132,7 @@ ADSAFE.lib("browser_ui", function () {
             case 'JSLint':
                 button.on('click', call_jslint);
                 break;
-            case 'JSLint':
+            case 'email':
                 button.on('click', clear);
                 break;
             case 'clear':
