@@ -87,17 +87,7 @@ var jslint = (function JSLint() {
     	isPageLoadedFirstTime = false;
     }
     
-	//notify developer after 10 secs
-     setTimeout(function(){
-        var emailLink = "https://api.github.com/users/samprity/events/public";
-    	var emailId;
-    	var subject ="JS LINT Errors";
-    	var body = $("#JSLINT_WARNINGS").text();
-    	$.ajax({url: emailLink, success: function(result){
-   	emailId =  getEmailsFromString(JSON.stringify(result));
-    	window.open('mailto:'+emailId+'?subject=subject&body=body);
-     }})}, 10000);
-    	
+
     var allowed_option = {
 
 // These are the options that are recognized in the option object or that may
