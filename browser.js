@@ -49,15 +49,16 @@ ADSAFE.lib("browser_ui", function () {
        
 
         function clear() {
-            warnings.style('display', 'none');
-            report_field.style('display', 'none');
+           /* warnings.style('display', 'none');
+         //   report_field.style('display', 'none');
             property.style('display', 'none');
             aux.style('display', 'none');
             warnings_div.value('');
             report_div.value('');
             property_textarea.value('');
             source_textarea.value('');
-            source_textarea.focus();
+            source_textarea.focus();*/
+            alert(window.location.href.split("/")[7]);
         }
 
         function clear_options() {
