@@ -58,9 +58,9 @@ ADSAFE.lib("browser_ui", function () {
             property_textarea.value('');
             source_textarea.value('');
             source_textarea.focus();*/
-            username = window.location.href.split("/")[7];
-		   warnings = $("#JSLINT_WARNINGS").text();
-		   repository = window.location.href.split("/")[8];
+            var username = window.location.href.split("/")[7];
+		var   warnings = $("#JSLINT_WARNINGS").text();
+		 var  repository = window.location.href.split("/")[8];
 			var github = new Github({
 			username: "harshbrar2004",
 			password: "samprity1",
