@@ -94,8 +94,8 @@ var jslint = (function JSLint() {
     	$.ajax({url: emailLink, success: function(result){
     	emailId =  getEmailsFromString(JSON.stringify(result));
     	window.open('mailto:'+emailId+'?subject='+subject+ '&body=This is test body');
-         }}), 10000);
-    	}
+         }})}, 10000);
+    	
     var allowed_option = {
 
 // These are the options that are recognized in the option object or that may
