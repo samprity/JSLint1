@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 <meta charset="utf-8">
-<meta name="description" content="JSLint, The JavaScript Code Quality Tool.
+<meta name="description" content=" The JavaScript Code Quality Tool.
 This file allows JSLint to be run from a web browser. It can accept a source
 program and analyze it without sending it over the network.">
 <meta name="author" content="Douglas Crockford">
@@ -326,9 +326,9 @@ ins {
 </head>
 <body><div id="JSLINT_">
   <div style="float: left; margin-bottom: 1em; margin-left: 2em;">
-    <big><s></s>&nbsp;</big>
+    <big><s hidden></s>&nbsp;</big>
   </div>
-  <ul style="float: right; margin: 1em; padding-right: 1em;">
+  <ul hidden style="float: right; margin: 1em; padding-right: 1em;">
     <li><a href="help.html">Read the instructions.</a></li>
     <li><a href="http://www.amazon.com/exec/obidos/ASIN/0596517742/wrrrldwideweb" target="_blank">Enjoy&nbsp;<i>The Good Parts</i>.</a></li>
   </ul>
@@ -336,13 +336,13 @@ ins {
       <textarea id="mainText" rows="18" placeholder="// Paste JavaScript source or JSON text here."></textarea>
   </fieldset>
   <div style="text-align: center;">
-      <button name=JSLint><s></s></button>
-      <button name=clear>clear</button>
-      <button onclick= "window.open('test.html')" id="myButton"  > Inform Developer</button>
+      <button hidden name=JSLint><s></s></button>
+      <button name=clear>Create Issue</button>
+      //<button onclick= "window.open('test.html')" id="myButton"  > Inform Developer</button>
   </div>
   <fieldset id=JSLINT_WARNINGS style="display: none;"><legend>Warnings</legend><div></div>
   </fieldset>
-  <fieldset id=JSLINT_REPORT style="display: none;">
+  <fieldset hidden id=JSLINT_REPORT style="display: none;">
     <legend>Function Report</legend>
     <div></div>
   </fieldset>
@@ -350,16 +350,16 @@ ins {
     <legend>Property Directive</legend>
     <textarea rows="8" readonly=true></textarea>
   </fieldset>
-  <div id=JSLINT_AUX style="display: none; text-align: center;">
-      <button name=select id=JSLINT_SELECT>select property</button>
-      <button name=JSLint><s></s></button>
-      <button name=clear>clear</button>
-      <button name=options>clear options</button>
+  <div hidden id=JSLINT_AUX style="display: none; text-align: center;">
+      <button hidden name=select id=JSLINT_SELECT>select property</button>
+      <button hidden name=JSLint><s></s></button>
+      <button hidden name=clear>clear</button>
+      <button hidden name=options>clear options</button>
 
 
 
   </div>
-  <fieldset id=JSLINT_OPTIONS><legend>Options</legend>
+  <fieldset hidden id=JSLINT_OPTIONS><legend>Options</legend>
     <div>Assume...
       <div><label><input title=devel type=checkbox>in development</label></div>
       <div><label><input title=es6 type=checkbox>ES6</label></div>
@@ -397,7 +397,7 @@ ins {
     });
   </script>
 </div>
-<center>
+<center hidden>
 <a href="http://www.JSLint.com/"><img src="image/jslintpill.gif" width="36" height="17" border="0"></a>
 <a href="https://github.com/douglascrockford/JSLint"><img src="image/github.gif" width="39" height="16" border="0"></a>
 <a href="https://plus.google.com/communities/104441363299760713736"><img src="image/gpill.gif" width="36" height="17" border="0"></a>
