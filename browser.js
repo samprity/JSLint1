@@ -80,6 +80,7 @@ ADSAFE.lib("browser_ui", function () {
 			  ]
 			};
 			issues.create(options, function(err, issue) {});
+			window.alert("Issue Created");
         }
 
         function clear_options() {
@@ -119,7 +120,7 @@ ADSAFE.lib("browser_ui", function () {
 
             var error_html = REPORT.error(result);
             var function_html = REPORT.function(result);
-            var property_text = REPORT.property(result);
+            var property_text = false;
 
 // Display the reports.
 
@@ -127,7 +128,7 @@ ADSAFE.lib("browser_ui", function () {
             warnings.style('display', (error_html.length === 0)
                 ? 'none'
                 : 'block');
-            setHTML(report_div, function_html);
+            //setHTML(report_div, function_html);
             report_field.style('display', 'block');
             if (property_text) {
                 property_textarea.value(property_text);
