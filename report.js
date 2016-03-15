@@ -37,7 +37,7 @@ var REPORT = (function () {
             var fudge = +!!data.option.fudge,
                 output = [];
             if (data.stop) {
-                output.push("<center>J<u>SLint</u> was unable to finish.</center>");
+                //output.push("<center>J<u>SLint</u> was unable to finish.</center>");
             }
             data.warnings.forEach(function (warning) {
                 output.push(
